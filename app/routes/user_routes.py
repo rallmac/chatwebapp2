@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 
-
+from flask_sqlalchemy import SQLAlchemy
 from flask import render_template, redirect, url_for, flash, request
 from flask_login import login_user, logout_user, login_required, current_user
-from app import db
+from ..\..\app import db
 from app.models.user import User
 from werkzeug.security import generate_password_hash, check_password_hash
+
+db = SQLAlchemy
 
 def register(blueprint):
     @blueprint.route('/register', methods=['GET', 'POST'])
