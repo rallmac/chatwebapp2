@@ -15,7 +15,7 @@ migrate = Migrate()
 login_manager = LoginManager()
 socketio = SocketIO()
 
-def create_app(congfig_class=Config):
+def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
 

@@ -2,8 +2,8 @@
 
 import sys
 import os
-from ..app import create_app, socketio
-sys.path.append(os.path.abspath(so.path.join(os.path.dirname(__file__), '..')))
+from app import create_app, socketio
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # Create an app instance using the app factory
 app = create_app()
